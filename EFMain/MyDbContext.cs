@@ -16,6 +16,13 @@ namespace EFMain
         {
             if (Database.Exists())
             {
+                //IDatabaseInitializer:
+                //new CreateDatabaseIfNotExists<MyDbContext>();
+                //new DropCreateDatabaseAlways<MyDbContext>();
+                //new DropCreateDatabaseIfModelChanges<MyDbContext>();
+                //new MigrateDatabaseToLatestVersion<MyDbContext, Configuration>();
+                //new NullDatabaseInitializer<MyDbContext>();
+
                 Database.SetInitializer(new MigrateDatabaseToLatestVersion<MyDbContext, Configuration>());
             }
         }
